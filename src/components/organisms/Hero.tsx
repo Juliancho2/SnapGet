@@ -1,9 +1,10 @@
 import React from 'react';
+import Download from '../molecules/Download';
 
 const Hero = () => {
   return (
-    <div>
-
+    <div className='max-w-6xl mx-auto '>
+      <Download/>
     </div>
   );
 };
