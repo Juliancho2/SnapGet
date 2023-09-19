@@ -2,6 +2,7 @@
 @tailwind components;
 @tailwind utilities;
 
+
 body{
-    background: conic-gradient(at left top, rgb(199, 210, 254), rgb(254, 202, 202), rgb(254, 249, 195));
+    background: linear-gradient(to top, rgb(255, 228, 230), rgb(204, 251, 241));
 }

@@ -4,7 +4,7 @@ import { features } from '@/static';
 
 const Features = () => {
     return (
-        <div className='max-w-6xl mx-auto space-y-7 min-h-[50vh]'>
+        <div className='max-w-6xl mx-auto space-y-7 min-h-[50vh] px-2'>
             <section>
                 <div className="join join-vertical w-full bg-white">
                     {features.map((item, index) => (
