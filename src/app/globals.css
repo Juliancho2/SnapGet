@@ -3,6 +3,10 @@
 @tailwind utilities;
 
 
-body{
-    background: linear-gradient(to top, rgb(255, 228, 230), rgb(204, 251, 241));
+body {
+    /* background: linear-gradient(to top, rgb(255, 228, 230), rgb(204, 251, 241)); */
+    background: radial-gradient(at center top, rgb(255, 228, 230), rgb(204, 251, 241));
+    background: conic-gradient(at left bottom, rgb(224, 231, 255), rgb(252, 165, 165), rgb(251, 146, 60));
+    margin: 15px;
+    border-radius: 10px;
 }
