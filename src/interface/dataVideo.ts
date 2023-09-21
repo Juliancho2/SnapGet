@@ -25,5 +25,7 @@ export interface DataVideoContextType {
     handleLoadingVideo:()=>void,
     handleError:(value:string)=>void,
     loading:boolean,
-    error:ErrorVideo
+    error:ErrorVideo,
+    urlInput:string,
+    handleUrlInput:(value:string)=>void
   }
