@@ -1,11 +1,6 @@
 {
-  "extends": "next/core-web-vitals",
+  "extends": ["next/core-web-vitals","standard"],
   "rules": {
-    "semi":["error","always"],
-    "quotes": ["error", "single"],
-    "no-trailing-spaces": "error",
-    "space-before-blocks": "error",
-    "import/order": "error",
-    "no-console": "error"
+    "semi":["error","always"]
   }
 }
