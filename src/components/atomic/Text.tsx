@@ -5,12 +5,12 @@ type Props={
     styles?:string
 }
 
-const Text = ({children,styles}:Props) => {
-    return (
+const Text = ({ children, styles }:Props) => {
+  return (
         <p className={styles}>
             {children}
         </p>
-    );
+  );
 };
 
 export default Text;

@@ -4,12 +4,12 @@ import Image from 'next/image';
 import Link from 'next/link';
 
 type Props={
-    routes:Array<{path:string,label:string,icon:string}>
+    routes:Array<{path:string, label:string, icon:string}>
 }
 
-const Menu = ({routes}:Props) => {
-    const [openMenu, setOpenMenu] = useState(false);
-    return (
+const Menu = ({ routes }:Props) => {
+  const [openMenu, setOpenMenu] = useState(false);
+  return (
         <div className='md:hidden relative'>
             <Image onClick={() => setOpenMenu((prev) => !prev)} width={30} height={30} alt={'menu'} src={menu} />
             {
@@ -29,7 +29,7 @@ const Menu = ({routes}:Props) => {
 
             }
         </div>
-    );
+  );
 };
 
 export default Menu;

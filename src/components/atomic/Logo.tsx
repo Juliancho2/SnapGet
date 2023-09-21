@@ -8,7 +8,7 @@ type Props={
     height:number
 }
 
-const Logo = ({width,height}:Props) => {
+const Logo = ({ width, height }:Props) => {
   return (
     <Link href={'#'} >
         <Image width={width} height={height} src={img} alt='logo'/>

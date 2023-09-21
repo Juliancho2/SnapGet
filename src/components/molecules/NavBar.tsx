@@ -6,13 +6,12 @@ import Link from 'next/link';
 import Menu from './Menu';
 
 const routes = [
-    { path: 'https://twitter.com/julianchoms', label: 'Follow me', icon: twitter },
-    { path: 'https://www.buymeacoffee.com/juliancho', label: 'Buy me a coffee', icon: coffee }
+  { path: 'https://twitter.com/julianchoms', label: 'Follow me', icon: twitter },
+  { path: 'https://www.buymeacoffee.com/juliancho', label: 'Buy me a coffee', icon: coffee }
 ];
 
-
 const NavBar = () => {
-    return (
+  return (
         <nav className='navbar w-full'>
             <div className='navbar-end w-full'>
                 <ul className=' menu flex-row hidden md:flex items-center   text-slate-600 '>
@@ -29,7 +28,7 @@ const NavBar = () => {
                 <Menu routes={routes} />
             </div>
         </nav>
-    );
+  );
 };
 
 export default NavBar;
