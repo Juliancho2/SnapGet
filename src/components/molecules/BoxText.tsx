@@ -1,10 +1,11 @@
 import React from 'react';
 type Props={
-    children:React.ReactNode
+    children:React.ReactNode,
+    moreStyles?:string
 }
-const BoxText = ({children}:Props) => {
+const BoxText = ({ children, moreStyles }:Props) => {
   return (
-    <div className='flex max-w-lg  flex-col items-center pb-10  w-full'>
+    <div className={`flex  flex-col items-center pb-10 ${moreStyles}`} >
         {children}
     </div>
   );
