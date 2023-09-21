@@ -34,7 +34,7 @@ const Features = () => {
                     <h2 className='text-2xl font-semibold mb-5 text-center md:text-start'>Are you a social media enthusiast?</h2>
                     <Text styles='text-base text-black text-center' >
 
-                        Have you ever come across incredible videos that you want to save, share, or enjoy without annoying watermarks? You`re in luck! DownloadPro is your ultimate solution for quickly and easily downloading videos from TikTok, Facebook, Instagram, and YouTube while removing watermarks. With DownloadPro, you`ll have full control over the content you cherish.
+                    Have you ever come across amazing videos that you want to save or share without watermarks? SnapGet is the solution to download videos from TikTok, Facebook, Instagram and YouTube quickly and easily, removing watermarks.
                     </Text>
                 </BoxText>
             <section>
