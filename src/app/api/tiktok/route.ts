@@ -1,8 +1,7 @@
 import axios from 'axios';
 import { NextRequest, NextResponse } from 'next/server';
 
-
-export async function POST(res:NextRequest) {
+export async function POST (res:NextRequest) {
   const body = await res.json();
 
   try {
@@ -13,9 +12,9 @@ export async function POST(res:NextRequest) {
 
     const options = {
       method: 'GET',
-      url:  process.env.API_URL_TIk_TOK,
+      url: process.env.API_URL_TIk_TOK,
       params: {
-        url:body.url
+        url: body.url
       },
       headers: {
         'X-RapidAPI-Key': process.env.API_KEY_TIk_TOK,
@@ -23,13 +22,12 @@ export async function POST(res:NextRequest) {
       }
     };
 
-
     const API_URL = String(process.env.API_URL_TIk_TOK);
 
     const { data } = await axios.get(API_URL, options);
-    return NextResponse.json(data);
 
+    return NextResponse.json(data);
   } catch (err) {
-    return NextResponse.json({message: 'There was an error in the application.'});
+    return NextResponse.json({ message: 'There was an error in the application.' });
   }
 }
