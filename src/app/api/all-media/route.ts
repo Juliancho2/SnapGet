@@ -1,14 +1,14 @@
 import axios from 'axios';
-import { NextRequest, NextResponse } from 'next/server';
+import { NextResponse } from 'next/server';
 import { transformData } from '@/utils/transformData';
 
-export async function POST (res:NextRequest) {
-  const body = await res.json();
+export async function POST (req: Request) {
+  const body = await req.json();
 
   try {
     // Validación de la solicitud
     if (!body.url) {
-      return NextResponse.json({ message: 'The request must contain a valid URL.' });
+      return new Response('The request must contain a valid URL', { status: 400 });
     }
 
     const options = {
@@ -25,10 +25,14 @@ export async function POST (res:NextRequest) {
     const API_URL = String(process.env.API_URL_MEDIA_DOWNLOADER);
 
     const { data } = await axios.get(API_URL, options);
+
+    if (data.error) {
+      return new Response(String(data.error_message), { status: 400 });
+    }
     const dataTransformed = transformData(data);
 
     return NextResponse.json(dataTransformed);
-  } catch (err) {
-    return NextResponse.json({ message: 'There was an error in the application.' });
+  } catch (err:any) {
+    return NextResponse.json({ message: err.message });
   }
 }

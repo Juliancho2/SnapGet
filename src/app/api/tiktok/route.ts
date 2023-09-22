@@ -1,13 +1,13 @@
 import axios from 'axios';
-import { NextRequest, NextResponse } from 'next/server';
+import { NextResponse } from 'next/server';
 
-export async function POST (res:NextRequest) {
+export async function POST (res:Request) {
   const body = await res.json();
 
   try {
     // Validación de la solicitud
     if (!body.url) {
-      return NextResponse.json({ message: 'The request must contain a valid URL.' });
+      return new Response('The request must contain a valid URL', { status: 400 });
     }
 
     const options = {

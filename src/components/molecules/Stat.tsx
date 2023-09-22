@@ -1,11 +1,12 @@
 import Image from 'next/image';
-import React, { useEffect } from 'react';
+import React, { useContext, useEffect } from 'react';
 import description from 'src/assets/svg/hashtag.svg';
 import author from 'src/assets/svg/author.svg';
 import download from 'src/assets/svg/download.svg';
 import Link from 'next/link';
 import { VideoInfo } from '@/interface/dataVideo';
 import useMediaDownload from '@/hooks/useMediaDownload';
+import { DataInfoContext } from '@/context/infoVideoContext';
 
 type Props = {
   data: VideoInfo;
@@ -13,6 +14,7 @@ type Props = {
 
 const Stat = ({ data }: Props) => {
   const { urlVideo, handleDownloadClick } = useMediaDownload(data);
+  const context = useContext(DataInfoContext);
 
   useEffect(() => {
     if (data) {
@@ -22,7 +24,7 @@ const Stat = ({ data }: Props) => {
 
   return (
     <>
-      {data && (<div className="stats stats-vertical lg:stats-horizontal shadow">
+      {(data && !context?.error.isError) && (<div className="stats stats-vertical lg:stats-horizontal shadow">
         <div className='bg-white rounded-md min-h-32 flex items-center justify-center stat'>
           <Image className='stat max-w-[150px]' width={80} height={80} alt={'image'} src={data?.cover[0] || ''} />
         </div>
