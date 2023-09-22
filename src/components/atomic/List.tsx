@@ -6,10 +6,10 @@ type Props = {
 
 const List = ({ content }: Props) => {
   return (
-        <ol className='list-inside space-y-4 text-sm  '>
+        <ol className='list-inside space-y-4 text-base  '>
             {
                 content.map((content, index) => (
-                    <li key={index} className='text-black'><strong>{index + 1}.</strong> {content}</li>
+                    <li key={index} className='text-gray-600 font-medium'><strong>{index + 1}.</strong> {content}</li>
                 ))
             }
 

@@ -10,8 +10,8 @@ const Hero = () => {
 
       <Download />
       <div className='flex justify-end'>
-        <BoxText moreStyles='max-w-md  p-2 ' >
-          <h2 className='text-2xl font-semibold mb-5'>how do to use?</h2>
+        <BoxText moreStyles='max-w-md  p-1 ' >
+          <h2 className='text-2xl font-bold mb-5'>How do to use?</h2>
           <List content={contentHowDoUse} />
         </BoxText>
       </div>

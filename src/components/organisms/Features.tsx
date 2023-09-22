@@ -30,9 +30,9 @@ const platormAllowed = [
 const Features = () => {
   return (
         <div className='max-w-6xl mx-auto my-5 md:my-20 space-y-28 min-h-[50vh] px-2'>
-                <BoxText >
-                    <h2 className='text-2xl font-semibold mb-5 text-center md:text-start'>Are you a social media enthusiast?</h2>
-                    <Text styles='text-base text-black text-center' >
+                <BoxText moreStyles='max-w-4xl mx-auto'>
+                    <h2 className='text-2xl font-bold text-black mb-5 text-center md:text-start'>Are you a social media enthusiast?</h2>
+                    <Text styles='text-base text-center text-gray-600 font-medium' >
 
                     Have you ever come across amazing videos that you want to save or share without watermarks? SnapGet is the solution to download videos from TikTok, Facebook, Instagram and YouTube quickly and easily, removing watermarks.
                     </Text>
