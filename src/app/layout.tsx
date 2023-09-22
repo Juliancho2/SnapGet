@@ -1,10 +1,10 @@
 import React from 'react';
 import './globals.css';
 import type { Metadata } from 'next';
-import { Poppins } from 'next/font/google';
+import { Prompt } from 'next/font/google';
 import { Analytics } from '@vercel/analytics/react';
 
-const inter = Poppins({ subsets: ['latin'], weight: ['100', '200', '300', '400', '500', '600', '700'] });
+const inter = Prompt({ subsets: ['latin'], weight: ['100', '300', '400', '500', '600', '700'] });
 
 export const metadata: Metadata = {
   title: 'SnapGet',
