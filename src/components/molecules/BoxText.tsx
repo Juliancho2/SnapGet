@@ -5,7 +5,7 @@ type Props={
 }
 const BoxText = ({ children, moreStyles }:Props) => {
   return (
-    <div className={`flex  flex-col items-center pb-10 ${moreStyles}`} >
+    <div className={`flex  flex-col items-center ${moreStyles}`} >
         {children}
     </div>
   );

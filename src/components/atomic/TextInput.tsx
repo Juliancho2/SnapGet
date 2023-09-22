@@ -16,8 +16,8 @@ const TextInput = ({ setUrl, url, loading }: Props) => {
   };
 
   return (
-    <div className='bg-white h-[64px] w-full flex p-2 rounded-md shadow-sm'>
-      <input value={url} required onChange={(e) => setUrl(e.target.value)} type="text " className='h-full w-full outline-none' placeholder='Paste your link' />
+    <div className='bg-white h-[64px] w-full flex p-2 rounded-md shadow-sm border'>
+      <input value={url} required onChange={(e) => setUrl(e.target.value)} type="text " className=' h-full w-full outline-none' placeholder='Paste your link' />
       {
        url.trim().length === 0
          ? <div className="tooltip flex items-center justify-center mx-2 hover:opacity-75 cursor-pointer transition-all duration-200" data-tip="paste">

@@ -25,7 +25,7 @@ const Download = () => {
         context.handleLoadingVideo();
         const response = await axios.post(apiURl, { url: context.urlInput });
         context?.handleDataVideo(response.data);
-      } catch (err:any) {
+      } catch (err: any) {
         context?.handleError(err.response.data);
       }
     }
@@ -36,7 +36,7 @@ const Download = () => {
     < >
       {
         (context?.error.isError) && (
-          <div className="toast toast-end">
+          <div className="toast toast-end z-10">
             <div className="alert alert-error">
               <span>{context?.error.name}</span>
             </div>
@@ -44,10 +44,12 @@ const Download = () => {
         )
       }
       {
-        context && <div className='flex flex-col items-start  justify-center mt-10'>
-          <Text styles='text-4xl font-bold text-center md:text-start  '>Your source of videos  from your favorite social networks</Text>
-          <p className='mb-10 mt-2 text-gray-600 font-medium'>All-in-One Video Download Solution!</p>
-          <form className='w-full md:w-4/5 h-auto' onSubmit={(e) => handleSubmit(e)}>
+        context && <div className='flex flex-col gap-8 items-center md:mt-24 justify-center z-10'>
+          <div>
+            <Text styles='text-4xl  font-bold text-center  '>Your source of videos  from <br /> your favorite social networks</Text>
+            <p className='mt-4 text-gray-600 font-medium text-center'>All-in-One Video Download Solution!</p>
+          </div>
+          <form className='w-full md:w-[600px] h-auto' onSubmit={(e) => handleSubmit(e)}>
             <TextInput loading={context?.loading} setUrl={context?.handleUrlInput} url={context?.urlInput} />
           </form>
         </div>

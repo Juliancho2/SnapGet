@@ -6,7 +6,8 @@ import instagram from 'src/assets/svg/instagram.svg';
 import Image from 'next/image';
 import BoxText from '../molecules/BoxText';
 import Text from '../atomic/Text';
-import { features } from '@/static';
+import { contentHowDoUse, features } from '@/static';
+import List from '../atomic/List';
 
 const platormAllowed = [
   {
@@ -29,14 +30,18 @@ const platormAllowed = [
 
 const Features = () => {
   return (
-        <div className='max-w-6xl mx-auto my-5 md:my-20 space-y-28 min-h-[50vh] px-2'>
-                <BoxText moreStyles='max-w-4xl mx-auto'>
-                    <h2 className='text-2xl font-bold text-black mb-5 text-center md:text-start'>Are you a social media enthusiast?</h2>
-                    <Text styles='text-base text-center text-gray-600 font-medium' >
+        <div className='max-w-6xl mx-auto my-5 md:my-20 space-y-16 md:space-y-28 min-h-[50vh] px-2'>
+            <BoxText moreStyles='max-w-xl mx-auto mt-10 md:mt-0 ' >
+                <h2 className='text-2xl font-bold mb-4'>How do to use?</h2>
+                <List content={contentHowDoUse} />
+            </BoxText>
+            <BoxText moreStyles='max-w-xl mx-auto'>
+                <h2 className='text-2xl font-bold text-black mb-5 text-center md:text-start'>Are you a social media enthusiast?</h2>
+                <Text styles='text-base  text-gray-600 font-medium' >
 
                     Have you ever come across amazing videos that you want to save or share without watermarks? SnapGet is the solution to download videos from TikTok, Facebook, Instagram and YouTube quickly and easily, removing watermarks.
-                    </Text>
-                </BoxText>
+                </Text>
+            </BoxText>
             <section>
                 <div className="join join-vertical w-full bg-white">
                     {features.map((item, index) => (
