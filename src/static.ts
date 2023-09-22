@@ -23,7 +23,7 @@ export const features = [
 ];
 
 export const contentHowDoUse = [
-  'Find a video on SnapGet, Facebook, Youtube or yout that you want to download.',
+  'Find a video from Tik tok , Facebook, Youtube or Instagram that you want to download.',
   'Copy the video link.',
   'Visit SnapGet and paste the link into the designated field.',
   'Click Download and you re done! Your video is ready for download.'
