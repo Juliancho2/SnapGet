@@ -1,11 +1,17 @@
 export const transformData = (originalData:any) => {
+  const {
+    links,
+    picture,
+    description
+  } = originalData;
+
   const transformedData = {
-    video: [originalData.links[1] ? originalData.links[1].link : originalData.links[0].link],
+    video: [(links && links[1]?.link) || (links && links[0]?.link) || ''],
     music: [''],
-    cover: [originalData.picture ? originalData.picture : ''],
+    cover: [picture || ''],
     OriginalWatermarkedVideo: [''],
-    description: [originalData.description ? originalData.description : ''],
-    dynamic_cover: [originalData.picture ? originalData.picture : ''],
+    description: [description || ''],
+    dynamic_cover: [picture || ''],
     author: [''],
     region: [''],
     avatar_thumb: [''],
