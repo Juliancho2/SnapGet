@@ -46,7 +46,7 @@ const Download = () => {
       {
         context && <div className='flex flex-col gap-8 items-center md:mt-24 justify-center z-10'>
           <div>
-            <Text styles='text-4xl sm:text-5xl font-bold text-center  '>Download Videos from <br /> <span className='bg-gradient-to-r from-rose-500 to-orange-400 bg-clip-text text-transparent'>Social Media Favorites</span> </Text>
+            <Text styles='text-4xl sm:text-5xl font-bold text-center  '>Download Videos From Your <br /> <span className='bg-gradient-to-r from-rose-500 to-orange-400 bg-clip-text text-transparent'>Favorite Social Networks</span> </Text>
             <p className='mt-4 text-gray-600 font-medium text-center text-lg'>All-in-One Video Download Solution!</p>
           </div>
           <form className='w-full md:w-[600px] h-auto' onSubmit={(e) => handleSubmit(e)}>
