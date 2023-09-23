@@ -7,4 +7,5 @@ body {
     background:radial-gradient(at left top, rgb(252, 231, 243), rgb(255, 237, 213), rgb(252, 231, 243));
     margin: 15px;
     border-radius: 15px;
+    position: relative;
 }

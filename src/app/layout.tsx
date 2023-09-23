@@ -19,9 +19,13 @@ export default function RootLayout ({
 }) {
   return (
     <html lang="en">
-      <body className={inter.className}>
-        {children}
-        <Analytics/>
+      <body className={`${inter.className} `}>
+        <div className='absolute bg-gradient bg-cuadricula bg-opacity-5 w-full h-full top-0 left-0 rounded-xl'>
+        </div>
+        <div className='z-20 relative'>
+          {children}
+          <Analytics />
+        </div>
       </body>
     </html>
   );

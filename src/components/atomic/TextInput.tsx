@@ -16,7 +16,7 @@ const TextInput = ({ setUrl, url, loading }: Props) => {
   };
 
   return (
-    <div className='bg-white h-[64px] w-full flex p-2 rounded-md shadow-sm border'>
+    <div className='bg-white h-[64px] w-full flex p-2 rounded-md shadow-lg border'>
       <input value={url} required onChange={(e) => setUrl(e.target.value)} type="text " className=' h-full w-full outline-none' placeholder='Paste your link' />
       {
        url.trim().length === 0
