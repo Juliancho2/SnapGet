@@ -5,7 +5,7 @@ import Link from 'next/link';
 import Menu from './Menu';
 
 const routes = [
-  {path:'https://github.com/Juliancho2/SnapGet',label:'GitHub',icon: github }
+  { path: 'https://github.com/Juliancho2/SnapGet', label: 'GitHub', icon: github }
 ];
 
 const NavBar = () => {

@@ -7,7 +7,7 @@ type Props={
     routes:Array<{path:string, label:string, icon:string}>
 }
 
-const Menu = ({routes}:Props) => {
+const Menu = ({ routes }:Props) => {
   const [openMenu, setOpenMenu] = useState(false);
   return (
         <div className='md:hidden relative'>
