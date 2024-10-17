@@ -3,7 +3,7 @@ import { DataVideoContextType } from '@/interface/dataVideo';
 
 const initialError = { name: '', isError: false };
 
-// Crear el contexto
+
 export const DataInfoContext = createContext<DataVideoContextType | undefined>(undefined);
 
 export const DataInfoProvider: React.FC<{ children: ReactNode }> = ({ children }) => {

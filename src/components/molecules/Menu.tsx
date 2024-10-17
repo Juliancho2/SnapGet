@@ -7,7 +7,7 @@ type Props={
     routes:Array<{path:string, label:string, icon:string}>
 }
 
-const Menu = ({ routes }:Props) => {
+const Menu = ({routes}:Props) => {
   const [openMenu, setOpenMenu] = useState(false);
   return (
         <div className='md:hidden relative'>
@@ -19,8 +19,8 @@ const Menu = ({ routes }:Props) => {
                     {
                        routes.map((route) => (
                            <li key={route.path}>
-                               <Link href={route.path} target='_blank' className='text-xs font-semibold '>
-                                   <Image width={20} height={20} alt={route.label} src={route.icon} />
+                               <Link href={route.path} target='_blank' className='text-xs font-semibold bg-black'>
+                                   <Image title={route.label} width={20} height={20} alt={route.label} src={route.icon} />
                                </Link>
                            </li>
                        ))
