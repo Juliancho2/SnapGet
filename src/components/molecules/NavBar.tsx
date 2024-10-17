@@ -1,13 +1,11 @@
 import React from 'react';
 import Image from 'next/image';
-import coffee from 'src/assets/svg/coffee.svg';
-import twitter from 'src/assets/svg/x.svg';
+import github from 'src/assets/svg/github.svg';
 import Link from 'next/link';
 import Menu from './Menu';
 
 const routes = [
-  { path: 'https://twitter.com/julianchoms', label: 'Follow me', icon: twitter },
-  { path: 'https://www.buymeacoffee.com/juliancho', label: 'Buy me a coffee', icon: coffee }
+  {path:'https://github.com/Juliancho2/SnapGet',label:'GitHub',icon: github }
 ];
 
 const NavBar = () => {
